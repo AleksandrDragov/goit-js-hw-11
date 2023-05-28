@@ -1,4 +1,4 @@
-import './sass/main.scss';
+import './css/styles.css';
 
 import { fetchImages } from './js/fetch-images';
 import { renderGallery } from './js/render-gallery';
@@ -7,7 +7,6 @@ import Notiflix from 'notiflix';
 
 import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
-
 
 const searchForm = document.querySelector('#search-form');
 const gallery = document.querySelector('.gallery');
@@ -84,17 +83,21 @@ function alertImagesFound(data) {
 }
 
 function alertNoEmptySearch() {
-  Notiflix.Notify.failure('The search bar cannot be empty. Please type any criteria in the search bar.');
+  Notiflix.Notify.failure(
+    'The search bar cannot be empty. Please type any criteria in the search bar.'
+  );
 }
 
 function displayNoResultsAlert() {
   Notiflix.Notify.failure(
-    'Sorry, there are no images matching your search query. Please try again.',
+    'Sorry, there are no images matching your search query. Please try again.'
   );
 }
 
 function alertEndOfSearch() {
-  Notiflix.Notify.failure("We're sorry, but you've reached the end of search results.");
+  Notiflix.Notify.failure(
+    "We're sorry, but you've reached the end of search results."
+  );
 }
 
 function delay(ms) {
